@@ -1,0 +1,86 @@
+<!-- Cabeçalho (Header) com navegação acessível -->
+<header>
+    <div class="logo-container">
+        <span class="logo-icon" aria-hidden="true">☀️🌡️</span>
+        <h1>Física: Temp & Lum</h1>
+    </div>
+    <nav aria-label="Navegação Principal">
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#conceitos">Conceitos</a></li>
+            <li><a href="#simulador">Simulador</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Seção Principal (Main) -->
+<main>
+    <!-- Hero Section -->
+    <section id="sobre" class="hero">
+        <div class="hero-content">
+            <h2>A Relação entre Temperatura e Luminosidade</h2>
+            <p>Explore como a radiação luminosa e a energia térmica interagem na física. Compreenda conceitos fundamentais da radiação de corpo negro, lei de Stefan-Boltzmann e o comportamento de corpos celestes e materiais terrestres.</p>
+            <a href="#simulador" class="btn">Testar Simulador</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Paisagem ensolarada representando radiação solar e temperatura">
+        </div>
+    </section>
+
+    <!-- Seção de Conceitos (Cards) -->
+    <section id="conceitos" class="content-section">
+        <h2 class="section-title">Conceitos Fundamentais</h2>
+        <div class="cards-container">
+            <article class="card">
+                <h3>🌡️ Temperatura Térmica</h3>
+                <p>Mede a energia cinética média das partículas de um sistema. Quanto maior a agitação molecular, maior a temperatura e maior a emissão de energia térmica.</p>
+            </article>
+            <article class="card">
+                <h3>💡 Fluxo Luminoso</h3>
+                <p>Representa a potência da radiação eletromagnética emitida por uma fonte visível ou invisível por unidade de tempo, quantificando o brilho e a intensidade da luz.</p>
+            </article>
+            <article class="card">
+                <h3>🔬 Lei de Stefan-Boltzmann</h3>
+                <p>Estabelece que a energia total emitida por unidade de área de um corpo negro é diretamente proporcional à quarta potência da sua temperatura absoluta ($E = \sigma T^4$).</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Seção Interativa / Simulador -->
+    <section id="simulador" class="simulator-section">
+        <h2 class="section-title" style="text-align: left; margin-bottom: 0.5rem;">Simulador Interativo</h2>
+        <p style="color: #475569; margin-bottom: 1rem;">Ajuste a temperatura aparente de uma fonte para observar o impacto estimado na sua luminosidade relativa.</p>
+        
+        <div class="simulator-container">
+            <div class="controls">
+                <div class="control-group">
+                    <label for="tempRange">Temperatura Fonte (Kelvin): <span id="tempVal">3000</span> K</label>
+                    <input type="range" id="tempRange" min="1000" max="10000" step="100" value="3000" aria-label="Controle deslizante de temperatura em Kelvin">
+                </div>
+                <div class="control-group">
+                    <label for="materialSelect">Tipo de Emissor:</label>
+                    <select id="materialSelect" aria-label="Selecione o tipo de emissor">
+                        <option value="1">Estrela Padrão / Corpo Negro</option>
+                        <option value="0.8">Elemento Incandescente</option>
+                        <option value="0.5">Superfície Terrestre</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="simulator-display">
+                <h3>Estimativa de Luminosidade</h3>
+                <div id="luminosityOutput" class="display-value">81.00 u.a.</div>
+                <p id="statusDesc" style="font-size: 0.9rem; color: #64748b;">Emitindo luz visível avermelhada / infravermelho.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Rodapé (Footer) -->
+<footer>
+    <p>&copy; 2026 Física: Temperatura e Luminosidade. Todos os direitos reservados.</p>
+    <p>Desenvolvido com HTML5 semântico, CSS Flexbox e JavaScript moderno.</p>
+</footer>
+
+<script src="script.js"></script>
